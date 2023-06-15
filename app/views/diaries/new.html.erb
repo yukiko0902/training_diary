@@ -1,0 +1,71 @@
+<%= render partial: "shared/header" %>
+
+<div class="diaries-form-main">
+  <h2 class ="today_training">本日のトレーニングを入力💪</h2>
+
+   <%= form_with model:@diary, local: true do |f| %>
+    日付
+     <%= f.date_field :day_date %>
+     <%= f.file_field :image, id:"item-image" %>
+    <h3>【１種目】</h3>
+    部位
+      <%= f.collection_select(:training_part1_id, TrainingPart1.all, :id, :name, {}, {class:"select-box", id:"training_part"}) %>
+
+    メニュー
+      <%= f.text_field :training_menu_1 %> 
+    ㎏
+      <%= f.text_field :weight_1 %>
+    
+    回数
+      <%= f.text_field :times_1 %>
+    
+    <h3>【２種目】</h3>
+    部位
+      <%= f.collection_select(:training_part2_id, TrainingPart2.all, :id, :name, {}, {class:"select-box", id:"training_part"}) %>
+    メニュー
+      <%= f.text_field :training_menu_2 %> 
+    ㎏
+      <%= f.text_field :weight_2 %>
+    
+    回数
+      <%= f.text_field :times_2 %>
+    <h3>【３種目】</h3>
+    部位
+      <%= f.collection_select(:training_part3_id, TrainingPart3.all, :id, :name, {}, {class:"select-box", id:"training_part"}) %>
+    メニュー
+      <%= f.text_field :training_menu_3 %> 
+    ㎏
+      <%= f.text_field :weight_3 %>
+    
+    回数
+      <%= f.text_field :times_3 %>
+
+    <h3>【４種目】</h3>
+    部位
+      <%= f.collection_select(:training_part4_id, TrainingPart4.all, :id, :name, {}, {class:"select-box", id:"training_part"}) %>
+    メニュー
+      <%= f.text_field :training_menu_4 %> 
+    ㎏
+      <%= f.text_field :weight_4 %>
+    
+    回数
+      <%= f.text_field :times_4 %>
+   
+    <h3>【５種目】</h3>
+    部位
+      <%= f.collection_select(:training_part5_id, TrainingPart5.all, :id, :name, {}, {class:"select-box", id:"training_part"}) %>
+    メニュー
+      <%= f.text_field :training_menu_5 %> 
+    ㎏
+      <%= f.text_field :weight_5 %>
+    
+    回数
+      <%= f.text_field :times_5 %>
+
+
+    日記
+     <%= f.text_field :training_diary %>
+      <%= f.submit "登録する"%>
+   
+   <% end %>
+</div>

@@ -1,1 +1,17 @@
 <%= render partial: "shared/header" %>
+
+<%= link_to "貯筋する",  new_diary_path %>
+
+<h2>最新の投稿</h2>
+
+<% @diaries.each do |d|%>
+  <li class='list'>
+    <%= d.day_date %>
+    <%= image_tag d.image %><br>
+    <%= d.training_part1.name %><br>
+    <%= d.training_menu_1 %><br>
+    <%= d.weight_1 %>㎏<br>
+    <%= d.times_1 %>回<br>
+    <%= d.training_diary %><br>
+  </li>
+<%end%>

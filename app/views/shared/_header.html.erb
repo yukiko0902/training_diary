@@ -1,9 +1,20 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
-<h1>貯筋日記</h1>
-<% if user_signed_in? %>
-  <%= "#{current_user.nickname}さんはログインしています" %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<% else %>  
-  <%= link_to "新規登録",  new_user_registration_path %>
-  <%= link_to "ログイン", new_user_session_path %>
-<% end %>
+<header class= "top-page-header">
+  <div class= "content-left">
+    <div class = "main-title">
+      <%= link_to "貯筋日記", "/" %>
+    </div>
+    <div class = "sub-title">
+      🔥毎日のトレーニングを記録しよう🔥
+    </div>  
+  </div>
+  <ul class='lists-right'>
+    <% if user_signed_in? %>
+      <%= "#{current_user.nickname}さん" %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <% else %>  
+      <%= link_to "新規登録",  new_user_registration_path %>
+      <%= link_to "ログイン", new_user_session_path %>
+    <% end %>
+  </ul>
+</header>
