@@ -5,13 +5,16 @@
 <h2>最新の投稿</h2>
 
 <% @diaries.each do |d|%>
-  <li class='list'>
-    <%= d.day_date %>
-    <%= image_tag d.image %><br>
-    <%= d.training_part1.name %><br>
-    <%= d.training_menu_1 %><br>
-    <%= d.weight_1 %>㎏<br>
-    <%= d.times_1 %>回<br>
-    <%= d.training_diary %><br>
+  <li class='diary-list'>
+    <%= link_to diary_path(d) do %>  
+      <%= d.day_date %><br>
+      <%= image_tag d.image.variant(resize: '300x300'), class: 'diary-image' if d.image.attached? %><br>
+     <%end%>  
+      <%= d.training_part1.name %><br>
+      <%= d.training_menu_1 %><br>
+      <%= d.weight_1 %>㎏<br>
+      <%= d.times_1 %>回<br>
+      <%= d.training_diary %><br>
+   
   </li>
 <%end%>
