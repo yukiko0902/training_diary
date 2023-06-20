@@ -1,1 +1,44 @@
+<%= render partial: "shared/header" %>
 <h1>投稿詳細ページ</h1>
+
+  <%= @diary.day_date %> <br>
+  <%= image_tag @diary.image.variant(resize: '300x300'), class: 'diary-image' if @diary.image.attached? %><br>
+  【１種目】
+  <%= @diary.training_part1.name %><br>
+  <%= @diary.training_menu_1 %><br>
+  <%= @diary.weight_1 %>㎏<br>
+  <%= @diary.times_1 %>回<br>
+  
+  【２種目】
+  <%= @diary.training_part2.name %><br>
+  <%= @diary.training_menu_2 %><br>
+  <%= @diary.weight_2 %>㎏<br>
+  <%= @diary.times_2 %>回<br>
+  
+  【３種目】
+  <%= @diary.training_part3.name %><br>  
+  <%= @diary.training_menu_3 %><br>
+  <%= @diary.weight_3 %>㎏<br>
+  <%= @diary.times_3 %>回<br>
+  
+  【４種目】
+  <%= @diary.training_part4.name %><br>  
+  <%= @diary.training_menu_4 %><br>
+  <%= @diary.weight_4 %>㎏<br>
+  <%= @diary.times_4 %>回<br>
+
+  【５種目】
+  <%= @diary.training_part5.name %><br>  
+  <%= @diary.training_menu_5 %><br>
+  <%= @diary.weight_5 %>㎏<br>
+  <%= @diary.times_5 %>回<br>
+
+  <%= @diary.training_diary %><br>
+   
+  <% if user_signed_in? %> 
+    <% if current_user == @diary.user%>
+        <%= link_to "編集", edit_diary_path, method: :get, class: "item-red-btn" %>
+        <p class="or-text">or</p>
+        <%= link_to "削除", diary_path, method: :delete, class:"item-destroy" %>
+    <% end %>
+  <% end %>
