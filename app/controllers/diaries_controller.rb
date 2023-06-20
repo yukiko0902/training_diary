@@ -18,6 +18,9 @@ class DiariesController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def diary_params
