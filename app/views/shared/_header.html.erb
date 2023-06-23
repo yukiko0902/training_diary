@@ -10,7 +10,7 @@
   </div>
   <ul class='lists-right'>
     <% if user_signed_in? %>
-      <%= "#{current_user.nickname}さん" %>
+      <%=link_to "#{current_user.nickname}さん", user_path(current_user.id) %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     <% else %>  
       <%= link_to "新規登録",  new_user_registration_path %>
