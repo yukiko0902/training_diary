@@ -1,0 +1,300 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+  
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* フッター */
+.fotter {
+  width: 100vw;
+  margin: 0 auto;
+  padding:  10px;
+  display: flex;
+  background-color: #D11C2C;
+}
+
+/* ヘッダー */
+
+* {
+  box-sizing: border-box;
+}
+
+
+.top-page-header {
+  width: 100vw;
+  margin: 0 auto;
+  padding:  10px;
+  display: flex;
+  background-color: #D11C2C;
+}
+
+
+.content-left {
+  width: 50%;
+  color:  white;
+  padding-left: 130px;
+}
+
+.main-title a{
+  font-size: 30px;
+  padding: 5px 10px;
+  color: white;
+}
+
+.sub-title {
+  font-size: 15px;
+}
+
+.content-right a {
+  text-decoration: none;
+  color: white;
+}
+
+.content-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-name_sign-up{
+  padding: 10px;
+  border:  orange 2px solid;
+  border-radius: 5px;
+  margin-right: 10px;
+
+}
+
+.logout_login{
+  padding: 10px;
+  border:  orange 2px solid;
+  border-radius: 5px;
+}
+
+/* index一覧表示*/
+
+.main{
+ display: block;
+ background-color: #faf0e6;
+}
+
+.diaries {
+  padding: 50px 500px;
+}
+
+
+.lists{
+  background-color: white;
+  border:#3b4043 1px solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.diary-image {
+  margin-left: 50px;
+}
+
+.card__user{
+  margin: 10px;
+}
+.d-date a{
+  color: black;
+  font-size: 20px;
+}
+
+.d-date{
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px;
+  background:linear-gradient(transparent 80%, yellow 0%);
+}
+
+.d-training_diary{
+  margin: 10px;
+}
+
+.show-more{
+  padding: 5px;
+  font-size: 15px;
+  color: gray;
+  text-decoration: underline;
+}
+
+/* 貯筋ボタン*/
+
+.tyokin-btn {
+  width: 120px;
+  background: #e28819;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.tyokin-btn-text {
+  color: dimgray;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.tyokin-btn-icon {
+  width: 60%;
+}
+
+
+/* ユーザー詳細ページ*/
+.posts-list{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* 投稿詳細ページ*/
+.show-title{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.d-training-show{
+  font-size: 15px;
+  padding-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.d-training_diary{
+  font-size: 15px;
+  padding-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+
+.edit-destroy-btn{
+  padding: 10px 500px;
+}
+
+.item-red-btn{
+  border: orange 2px solid;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin:100px;
+  background-color: white;
+}
+
+.item-destroy{
+  border: orange 2px solid;
+  border-radius: 5px;
+  padding: 5px 15px;
+  background-color: white;
+}
+
+
+.comment-field{
+  padding: 10px 500px;
+  margin: 10px 0;
+  color: #D11C2C;
+  
+}
+
+.form__btn {
+  background-color: orange;
+  color: #D11C2C;
+  border: gray 1px solid;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+.comment-actions{
+  padding: 10px 500px;
+  margin: 10px 10px;
+}
+
+
+.comment-caution{
+  color: #D11C2C;
+  font-weight: bold;
+  margin:10px 500px;
+}
+
+.comments_lists{
+  margin:10px 500px;
+  font-weight: bold;
+}
+
+.comments_list{
+  font-size: 15px;
+
+}
+
+.comment_user{
+  text-decoration:underline ;
+}
+
+.line{
+  color: gray;
+}
+
+/* 新規投稿ページ*/
+.diaries-form-main{
+ display: block;
+ background-color: #faf0e6;
+}
+.today_training{
+  margin:0px 500px;
+  padding-top: 20px;
+}
+
+.form-data{
+  margin:0px 500px;
+  width: 430px;
+}
+
+.form-data-diary{
+  margin:0px 500px;
+  box-sizing: 500px;
+}
+
+.form-btn{
+  margin:5px 500px;
+}
