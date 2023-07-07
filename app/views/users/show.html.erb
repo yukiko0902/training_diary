@@ -1,1 +1,12 @@
-ユーザー詳細ページ
+
+<%= render partial: "shared/header" %>
+<div class="main">
+    
+  <div class="posts-list">
+    <%= "#{@nickname}さんの投稿一覧"%></h2><br>
+  </div>
+  
+</div>
+<%= render partial: "diaries/diary",collection: @diary %>
+
+<%= render partial: "shared/fotter" %>

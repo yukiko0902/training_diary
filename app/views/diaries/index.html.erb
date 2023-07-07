@@ -1,20 +1,38 @@
 <%= render partial: "shared/header" %>
+  
+<div class="main">  
+  <% if user_signed_in? %>  
+    <%= link_to(new_diary_path, method: :get, class: 'tyokin-btn') do %>
+      <span class='tyokin-btn-text'>貯筋する</span>
+      <%= image_tag 'マッチョのイラスト4.png' , class: "tyokin-btn-icon" %>
+    <% end %>
+  <% end %>
 
-<%= link_to "貯筋する",  new_diary_path %>
+   <ul class="diaries">
+    <% @diaries.each do |d|%>
+      <li class="lists">
+        <%= link_to diary_path(d) do %>  
+          <div class ="d-date">
+            <%= d.day_date %><br>
+          </div>
+          <div class="d-image">
+            <%= image_tag d.image.variant(resize: '300x300'), class: 'diary-image' if d.image.attached? %><br>
+          </div>
+        <%end%>
+        <%= link_to "by #{d.user.nickname}", user_path(d.user.id), class: :card__user %>
+          <div class="d-training_diary">  
+            <%= d.training_diary %><br> 
+          </div>
+          <div class="show-more">
+            <%=link_to"show more", diary_path(d)%>
+          </div>
+        
+      </li>
+       
+    <%end%>
+  </ul>
 
-<h2>最新の投稿</h2>
+  
+</div>
 
-<% @diaries.each do |d|%>
-  <li class='diary-list'>
-    <%= link_to diary_path(d) do %>  
-      <%= d.day_date %><br>
-      <%= image_tag d.image.variant(resize: '300x300'), class: 'diary-image' if d.image.attached? %><br>
-     <%end%>  
-      <%= d.training_part1.name %><br>
-      <%= d.training_menu_1 %><br>
-      <%= d.weight_1 %>㎏<br>
-      <%= d.times_1 %>回<br>
-      <%= d.training_diary %><br>
-   
-  </li>
-<%end%>
+<%= render partial: "shared/fotter" %>

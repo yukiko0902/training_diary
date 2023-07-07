@@ -8,13 +8,21 @@
       🔥毎日のトレーニングを記録しよう🔥
     </div>  
   </div>
-  <ul class='lists-right'>
-    <% if user_signed_in? %>
-      <%=link_to "#{current_user.nickname}さん", user_path(current_user.id) %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    <% else %>  
-      <%= link_to "新規登録",  new_user_registration_path %>
-      <%= link_to "ログイン", new_user_session_path %>
+  <div class='content-right'>
+    <% if user_signed_in? %>  
+      <div class="user-name_sign-up">
+        <%=link_to "#{current_user.nickname}さん", user_path(current_user.id) %>
+      </div>
+      <div class="logout_login">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      </div>
+    <% else %>
+      <div class ="user-name_sign-up">  
+        <%= link_to "新規登録",  new_user_registration_path %>
+      </div>
+      <div class="logout_login">
+        <%= link_to "ログイン", new_user_session_path %>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </header>
