@@ -91,15 +91,14 @@ a {
 
 .user-name_sign-up{
   padding: 10px;
-  border:  orange 2px solid;
+  border:  orange 3px solid;
   border-radius: 5px;
   margin-right: 10px;
-
 }
 
 .logout_login{
   padding: 10px;
-  border:  orange 2px solid;
+  border:  orange 3px solid;
   border-radius: 5px;
 }
 
@@ -108,6 +107,7 @@ a {
 .main{
  display: block;
  background-color: #faf0e6;
+ height: 100%;
 }
 
 .diaries {
@@ -120,15 +120,18 @@ a {
   border:#3b4043 1px solid;
   border-radius: 5px;
   margin-bottom: 10px;
+  width: 500px;
 }
 
 .diary-image {
-  margin-left: 50px;
+  margin-left: 120px;
 }
 
 .card__user{
-  margin: 10px;
+  margin: 5px 20px;
+  text-decoration: underline;
 }
+
 .d-date a{
   color: black;
   font-size: 20px;
@@ -148,10 +151,13 @@ a {
 
 .show-more{
   padding: 5px;
+  margin: 50px;
   font-size: 15px;
   color: gray;
   text-decoration: underline;
 }
+
+
 
 /* 貯筋ボタン*/
 
@@ -187,6 +193,10 @@ a {
   font-size: 30px;
 }
 
+.diary__img{
+  margin-left: 120px;
+}
+
 /* 投稿詳細ページ*/
 .show-title{
   padding-top: 20px;
@@ -211,13 +221,14 @@ a {
 
 .edit-destroy-btn{
   padding: 10px 500px;
+
 }
 
 .item-red-btn{
   border: orange 2px solid;
   border-radius: 5px;
   padding: 5px 15px;
-  margin:100px;
+  margin:0 auto;
   background-color: white;
 }
 
@@ -225,6 +236,7 @@ a {
   border: orange 2px solid;
   border-radius: 5px;
   padding: 5px 15px;
+  margin:0 auto;
   background-color: white;
 }
 
@@ -258,8 +270,9 @@ a {
 }
 
 .comments_lists{
-  margin:10px 500px;
+  margin:0px 500px;
   font-weight: bold;
+  width: 500px;
 }
 
 .comments_list{
@@ -297,4 +310,22 @@ a {
 
 .form-btn{
   margin:5px 500px;
+}
+
+/* ログインページ*/
+
+
+.login-main{
+  height: 500px;
+  margin:0px 500px;
+}
+
+.new-main{
+  height: 500px;
+  margin:0px 500px;
+}
+
+.indispensable{
+  font-size: 5px;
+  color: red;
 }

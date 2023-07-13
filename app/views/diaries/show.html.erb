@@ -1,8 +1,10 @@
 <%= render partial: "shared/header" %>
 <div class="main">
+  
   <div class="show-title">
     トレーニング詳細📝
   </div>
+
   <ul class="diaries">
     <li class="lists">
       <div class ="d-date">
@@ -11,64 +13,66 @@
       <div class="d-image">
         <%= image_tag @diary.image.variant(resize: '300x300'), class: 'diary-image' if @diary.image.attached? %><br>
       </div>    
-    <div class="d-training-show">
-     【１種目】
-      <div class="training_part">
-        部位    ：   <%= @diary.training_part1.name %>
-      </div>
-        メニュー：   <%= @diary.training_menu_1 %><br>
-        重量    ：   <%= @diary.weight_1 %>㎏<br>
-        回数    ：   <%= @diary.times_1 %>回<br>
-    </div>
 
-    <div class="d-training-show">
-     【２種目】
-      <div class="training_part">
-        部位    ：   <%= @diary.training_part2.name %>
+      <div class="d-training-show">
+       【１種目】
+        <div class="training_part">
+          部位    ：   <%= @diary.training_part1.name %>
+        </div>
+          メニュー：   <%= @diary.training_menu_1 %><br>
+          重量    ：   <%= @diary.weight_1 %>㎏<br>
+          回数    ：   <%= @diary.times_1 %>回<br>
       </div>
-        メニュー：   <%= @diary.training_menu_2 %><br>
-        重量    ：   <%= @diary.weight_2 %>㎏<br>
-        回数    ：   <%= @diary.times_2 %>回<br>
-    </div>
-    <div class="d-training-show">
-     【３種目】
-      <div class="training_part">
-        部位    ：   <%= @diary.training_part3.name %>
-      </div>
-        メニュー：   <%= @diary.training_menu_3 %><br>
-        重量    ：   <%= @diary.weight_3 %>㎏<br>
-        回数    ：   <%= @diary.times_3 %>回<br>
-    </div>
 
-    <div class="d-training-show">
-     【４種目】
-      <div class="training_part">
-        部位    ：   <%= @diary.training_part4.name %>
+      <div class="d-training-show">
+       【２種目】
+        <div class="training_part">
+          部位    ：   <%= @diary.training_part2.name %>
+        </div>
+          メニュー：   <%= @diary.training_menu_2 %><br>
+          重量    ：   <%= @diary.weight_2 %>㎏<br>
+          回数    ：   <%= @diary.times_2 %>回<br>
       </div>
-        メニュー：   <%= @diary.training_menu_4 %><br>
-        重量    ：   <%= @diary.weight_4 %>㎏<br>
-        回数    ：   <%= @diary.times_4 %>回<br>
-    </div>
 
-    <div class="d-training-show">
-     【５種目】
-      <div class="training_part">
-        部位    ：   <%= @diary.training_part5.name %>
+      <div class="d-training-show">
+       【３種目】
+        <div class="training_part">
+          部位    ：   <%= @diary.training_part3.name %>
+        </div>
+          メニュー：   <%= @diary.training_menu_3 %><br>
+          重量    ：   <%= @diary.weight_3 %>㎏<br>
+          回数    ：   <%= @diary.times_3 %>回<br>
       </div>
-        メニュー：   <%= @diary.training_menu_5 %><br>
-        重量    ：   <%= @diary.weight_5 %>㎏<br>
-        回数    ：   <%= @diary.times_5 %>回<br>
-    </div>
+
+      <div class="d-training-show">
+       【４種目】
+        <div class="training_part">
+          部位    ：   <%= @diary.training_part4.name %>
+        </div>
+          メニュー：   <%= @diary.training_menu_4 %><br>
+          重量    ：   <%= @diary.weight_4 %>㎏<br>
+          回数    ：   <%= @diary.times_4 %>回<br>
+      </div>
+
+      <div class="d-training-show">
+       【５種目】
+        <div class="training_part">
+          部位    ：   <%= @diary.training_part5.name %>
+        </div>
+          メニュー：   <%= @diary.training_menu_5 %><br>
+          重量    ：   <%= @diary.weight_5 %>㎏<br>
+          回数    ：   <%= @diary.times_5 %>回<br>
+      </div>
 
    
-    <div class="d-training_diary">
-     【日記】<br>
-      <%= @diary.training_diary %><br>
-    </div>
+      <div class="d-training_diary">
+        【日記】<br>
+        <%= @diary.training_diary %><br>
+      </div>
   
-    <%= link_to "by  #{@diary.user.nickname}", user_path(@diary.user.id), class: :card__user %>
-  </li>  
-</ul>   
+      <%= link_to "by  #{@diary.user.nickname}", user_path(@diary.user.id), class: :card__user %>
+    </li>  
+  </ul>   
 
   <% if user_signed_in? %> 
     <% if current_user == @diary.user%>
@@ -99,7 +103,7 @@
 
    <ul class="comments_lists">
           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
-          <span class="line">--------------------</span>コメント一覧 <span class="line">--------------------</span>
+         コメント一覧 
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.content %>
