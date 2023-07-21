@@ -4,6 +4,10 @@
       <div class ="d-date">
         <%= link_to diary.day_date, diary_path(diary.id), method: :get %>
       </div>
+      <div class ="d-likes">
+        <%= render partial: "likes/like", locals: { diary: diary } %>
+      </div>
+      
        <%= link_to "by #{diary.user.nickname}", user_path(diary.user.id), class: :card__user %>  
       <div class="d-image">
         <%= link_to image_tag(diary.image.variant(resize: '300x300'), class: :diary__img ), diary_path(diary.id), method: :get %>
