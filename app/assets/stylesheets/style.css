@@ -41,7 +41,6 @@ a {
   width: 100vw;
   margin: 0 auto;
   padding:  10px;
-  display: flex;
   background-color: #D11C2C;
 }
 
@@ -103,6 +102,10 @@ a {
 }
 
 /* index一覧表示*/
+
+.d-likes{
+  margin: 5px 20px;
+}
 
 .main{
  display: block;
@@ -267,6 +270,13 @@ a {
   color: #D11C2C;
   font-weight: bold;
   margin:10px 500px;
+  width: 500px;
+  display: flex;
+}
+
+.comment-caution-rogin{
+  text-decoration: underline ;
+  
 }
 
 .comments_lists{
@@ -295,7 +305,8 @@ a {
 }
 .today_training{
   margin:0px 500px;
-  padding-top: 20px;
+  padding: 20px 0;
+  width: 500px;
 }
 
 .form-data{
@@ -317,12 +328,12 @@ a {
 
 .login-main{
   height: 500px;
-  margin:0px 500px;
+  margin:0px 450px;
 }
 
 .new-main{
   height: 500px;
-  margin:0px 500px;
+  margin:0px 450px;
 }
 
 .indispensable{

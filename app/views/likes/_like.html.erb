@@ -1,0 +1,6 @@
+<% if user_signed_in? && diary.liked_by?(current_user)%>
+  <%=link_to "❤️‍🔥", diary_likes_path(diary.id),  method: :delete, class: "diary_likes" , remote: true %>
+<% else %>
+  <%=link_to "🤍", diary_likes_path(diary.id), method: :post, class: "diary_likes", remote: true %>
+<% end %>
+

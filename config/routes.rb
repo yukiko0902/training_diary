@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: 'diaries#index'
   resources :diaries do
     resources :comments, only: :create
+    resources :likes, only: [:create, :destroy]
   end
-  resources :users, only: :show
+  resources :users, only: [:show] do
+    resource :relationships, only: [:create, :destroy]
+  end
 end

@@ -1,7 +1,12 @@
 class Diary < ApplicationRecord
   belongs_to :user
   has_many :comments
+  has_many :likes, dependent: :destroy
   has_one_attached :image
+
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+  end
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :training_part1

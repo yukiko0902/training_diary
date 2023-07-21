@@ -11,8 +11,10 @@
 日々のトレーニングのモチベーションアップにもつながる。<br>
 
 # URL
+https://training-diary-38951.onrender.com <br>
 
 # 利用方法
+
 ## トレーニング記録投稿
 1.トップページ（一覧ページ）のヘッダーからユーザー新規登録を行う<br>
 2.投稿ボタンから、トレーニング記録（日付・トレーニングメニュー・日記）を入力し投稿する。<br>
@@ -22,8 +24,8 @@
 2.コメント機能といいね機能で投稿したユーザーを応援する<br>
 
 # アプリケーションを作成した背景
-
-# 洗い出した要件
+  ジムに通っているが、なかかモチベーションが上がらずサボってしまうときがある。<br>
+  他ユーザーの投稿をみてモチベーションUPできるアプリがあればいいなと思った。<br>
 
 ## users テーブル
 
@@ -86,3 +88,22 @@
 
 -belongs_to :user<br>
 -belongs_to :diary<br>
+
+## likes テーブル
+
+### Association
+
+belongs_to :user<br>
+belongs_to :diary<br>
+
+## relationshios テーブル
+
+### Association
+belongs_to :following, class_name: "User" <br>
+belongs_to :follower, class_name: "User" <br>
+
+has_many :active_relationships, class_name: "Relationship", foreign_key: :following_id <br>
+has_many :passive_relationships, class_name: "Relationship", foreign_key: :follower_id <br>
+ 
+has_many :followings, through: :active_relationships, source: :follower <br>
+has_many :followers, through: :passive_relationships, source: :following <br>

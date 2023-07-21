@@ -15,6 +15,9 @@
           <div class ="d-date">
             <%= d.day_date %><br>
           </div>
+          <div class ="d-likes">
+            <%= render partial: "likes/like", locals: { diary: d } %>
+          </div>
            <%= link_to "by #{d.user.nickname}", user_path(d.user.id), class: :card__user %>
           <div class="d-image">
             <%= image_tag d.image.variant(resize: '300x300'), class: 'diary-image' if d.image.attached? %><br>
@@ -26,6 +29,7 @@
           <div class="show-more">
             <%=link_to"詳細を見る", diary_path(d)%>
           </div>
+
         
       </li>
        
