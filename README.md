@@ -27,6 +27,33 @@ https://training-diary-38951.onrender.com <br>
   ジムに通っているが、なかかモチベーションが上がらずサボってしまうときがある。<br>
   他ユーザーの投稿をみてモチベーションUPできるアプリがあればいいなと思った。<br>
 
+# 洗い出した要件
+　要件定義シート
+https://docs.google.com/spreadsheets/d/18bH5jSYssaGU83-yx6798pgMCvJf5m8pxBxacvyGH_Q/edit#gid=982722306
+
+# 実装予定の機能
+  フォロー機能　実装中　<br>
+  いいね機能 実装中　<br>
+
+# データベース設計
+  [![Image from Gyazo](https://i.gyazo.com/74d3f59ed624ee46047ef912fd34c175.png)](https://gyazo.com/74d3f59ed624ee46047ef912fd34c175)
+
+# 画面遷移図
+  [![Image from Gyazo](https://i.gyazo.com/783451d2c876f54508c32697ac4c746c.png)](https://gyazo.com/783451d2c876f54508c32697ac4c746c)
+
+# 開発環境
+  フロントエンド
+  バックエンド
+  インフラ
+  テスト
+  テキストエディタ
+  タスク管理
+
+  # 工夫したポイント
+　　シンプルで分かりやすいアプリケーションを意識して作成した。
+　　筋トレした箇所をアクティブハッシュで選択できるようにした。
+
+
 ## users テーブル
 
 | Column                     | Type       | Options                  |
