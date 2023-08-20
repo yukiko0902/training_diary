@@ -16,7 +16,7 @@
             <%= d.day_date %><br>
           </div>
           <div class ="d-likes">
-            <%= render partial: "likes/like", locals: { diary: d } %>
+            <%#= render partial: "likes/like", locals: { diary: d } %>
           </div>
            <%= link_to "by #{d.user.nickname}", user_path(d.user.id), class: :card__user %>
           <div class="d-image">

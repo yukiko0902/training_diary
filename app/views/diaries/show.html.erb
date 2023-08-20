@@ -11,7 +11,7 @@
         <%= @diary.day_date %>
       </div>
       <div class ="d-likes">
-        <%= render partial: "likes/like", locals: { diary: @diary } %>
+        <%#= render partial: "likes/like", locals: { diary: @diary } %>
       </div>
       <div class="d-image">
         <%= image_tag @diary.image.variant(resize: '300x300'), class: 'diary-image' if @diary.image.attached? %><br>
